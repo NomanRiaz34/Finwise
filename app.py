@@ -644,18 +644,6 @@ def render_dashboard():
 
         st.divider()
 
-        st.markdown("### 🔒 Session")
-
-        st.caption("Your API key is active for this session.")
-
-        if st.button(
-            "🚪 Sign out",
-            use_container_width=True,
-        ):
-            logout()
-
-        st.divider()
-
         st.caption("FinWise AI · Personal Finance")
 
         with st.expander("About FinWise AI"):
@@ -666,6 +654,19 @@ def render_dashboard():
 
         with st.expander("Important disclaimer"):
             st.write(DISCLAIMER)
+
+        st.divider()
+        st.markdown("### 🔒 Session")
+
+        st.caption("Your API key is active for this session.")
+
+        if st.button(
+            "🚪 Sign out",
+            use_container_width=True,
+        ):
+            logout()
+
+        
 
     # -----------------------------------------------------
     # HEADER
